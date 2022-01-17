@@ -18,6 +18,7 @@ import java.util.zip.ZipInputStream;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -92,6 +93,7 @@ public class FilesTest {
             ZipEntry entry;
             while ((entry = zis.getNextEntry()) != null) {
                 System.out.println(entry.getName());
+                assertThat(zis.getNextEntry().getName().contains("tb3(1).pdf"));
             }
         }
     }
