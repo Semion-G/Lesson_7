@@ -2,18 +2,13 @@ package guru.qa;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
-import org.apache.commons.io.IOUtils;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.*;
 import java.util.List;
 
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FileDownloadTest {
 
