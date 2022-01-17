@@ -23,12 +23,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FilesTest {
-
+    //Нужно открыть браузер на весь размер экрана
     @BeforeAll
     static void beforeAll() {
         Configuration.startMaximized = true;
     }
 
+    //Тест на отображение имени файла
     @Test
     @DisplayName("Проверка отображения имени файла после загрузки")
     void fileNameIsDisplayedAfterUploadTest() {
@@ -37,6 +38,7 @@ public class FilesTest {
         $("#uploadedFilePath").shouldHave(text("TestTxtFile.txt"));
     }
 
+    // Тест на txt файл
     @Test
     @DisplayName("Скачанный txt файл содержит ожидаемый текст")
     void downloadedTextFileContainsCorrectText() throws IOException {
