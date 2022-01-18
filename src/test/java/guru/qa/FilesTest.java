@@ -96,6 +96,8 @@ public class FilesTest {
             while ((entry = zis.getNextEntry()) != null) {
                 System.out.println(entry.getName());
                 assertThat(zis.getNextEntry().getName().contains("tb3(1).pdf"));
+
+                //Коммент. Отлично!
             }
         }
     }
